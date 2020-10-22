@@ -2,22 +2,25 @@ package clientstubexample;
 
 import java.rmi.RemoteException;
 
+import org.tempuri.AddDocument;
+import org.tempuri.AddResponseDocument;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
-import com.example.AddDocument;
-import com.example.AddResponseDocument;
-
-import calculator.CalculatorServiceStub;
+import calculator.CalculatorStub;
 
 public class TestCalculator {
 
-	private CalculatorServiceStub calculatorServiceStub;
+	private CalculatorStub calculatorServiceStub;
 
 	@BeforeSuite(alwaysRun = true)
 	public void setUp() throws Exception {
-		calculatorServiceStub = new CalculatorServiceStub();
+		calculatorServiceStub = new CalculatorStub("http://www.dneonline.com/calculator.asmx?wsdl");
+
+		// SecurityHeader sc = new SecurityHeader();
+		// SOAPHeaderBlock soapheader = sc.addSecurityHeader("DummyUname", "DummyPwd");
+		// calculatorServiceStub._getServiceClient().addHeader(soapheader);
 
 	}
 
@@ -25,13 +28,13 @@ public class TestCalculator {
 	public void addTest() throws org.apache.axis2.AxisFault, RemoteException {
 
 		AddDocument additionExample = AddDocument.Factory.newInstance();
-		additionExample.addNewAdd();
-		additionExample.getAdd().setIntA(3);
+		additionExample.addNewAdd().setIntA(10);
 		additionExample.getAdd().setIntB(6);
+
 		AddResponseDocument addResponse = calculatorServiceStub.add(additionExample);
 
-		Assert.assertTrue(addResponse.getAddResponse().getValue() > 0,
-				"The addition of tow numbers is not greater than zero");
+		Assert.assertTrue(addResponse.getAddResponse().getAddResult() > 0,
+				"The addition of two positive numbers is not greater than zero");
 
 	}
 
