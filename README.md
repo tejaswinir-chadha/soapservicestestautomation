@@ -23,4 +23,4 @@ We can use Axis2 to generate the Java class (stub) from the WSDL file which we c
 
 ## Author
 
-* **Tejaswini R** -https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white https://www.linkedin.com/in/tejaswinirajashekarappa/
+* **Tejaswini R** - https://www.linkedin.com/in/tejaswinirajashekarappa/
