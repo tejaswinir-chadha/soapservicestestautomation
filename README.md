@@ -1,7 +1,6 @@
 # SOAP Services Test Automation
 
 **Automation Frame work using stubs to test SOAP services**
-https://img.shields.io/github/license/tejaswinir-chadha/soapservicestestautomation?style=flat-square 
 
 
 This framework allows you to build over to test your soap services independent of any tool and have it integrated as a part of continous testing
