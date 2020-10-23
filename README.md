@@ -4,7 +4,8 @@
 
 
 This framework allows you to build over to test your soap services independent of any tool and have it integrated as a part of continous testing
-This framework uses wsdl2code Mojo for generating Java sources from a WSDL. Ref : https://axis.apache.org/axis2/java/core/tools/maven-plugins/axis2-wsdl2code-maven-plugin/wsdl2code-mojo.html 
+This framework uses wsdl2code Mojo for generating Java sources from a WSDL. 
+Ref : https://axis.apache.org/axis2/java/core/tools/maven-plugins/axis2-wsdl2code-maven-plugin/wsdl2code-mojo.html 
 We can use Axis2 to generate the Java class (stub) from the WSDL file which we can use as a client to generate the web service request, to send the request to the service end point and to process the response.
 
 ## Getting Started
