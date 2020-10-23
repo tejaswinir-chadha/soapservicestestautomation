@@ -1,6 +1,6 @@
 # SOAP Services Test Automation
 
-**Automation Frame work using stubs to test SOAP services**
+**Automation frame work using stubs to test SOAP services**
 
 
 This framework allows you to build over to test your soap services independent of any tool and have it integrated as a part of continous testing
